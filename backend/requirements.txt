@@ -2,3 +2,7 @@ fastapi
 uvicorn
 sentence-transformers
 numpy
+langchain
+langchain-community
+pypdf
+sqlalchemy
