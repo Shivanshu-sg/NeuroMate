@@ -262,7 +262,3 @@ Contributions, issues, and architecture suggestions are welcome. If you want to 
 - open an issue describing the problem or idea
 - discuss major architectural changes before implementation
 - keep privacy, explainability, and local-first design as core priorities
-
-## License
-
-Add a license here before public distribution. If you are unsure, a common starting point for open-source academic or prototype projects is MIT, but choose a license that matches your intended use.
