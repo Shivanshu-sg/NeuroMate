@@ -1,3 +1,5 @@
+from typing import Any
+
 from pydantic import BaseModel
 
 
@@ -7,3 +9,4 @@ class ReportUploadResponse(BaseModel):
     report_id: str
     filename: str
     raw_text: str
+    extracted_data: dict[str, Any]

@@ -21,5 +21,4 @@ class SQLiteReportRepository:
             session.expunge(report)
             return report
 
-
 report_repository = SQLiteReportRepository()

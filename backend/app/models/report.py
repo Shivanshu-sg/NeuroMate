@@ -14,6 +14,7 @@ class ReportRecord(Base):
     raw_text: Mapped[str] = mapped_column(Text, default="", nullable=False)
     extraction_status: Mapped[str] = mapped_column(default="pending", nullable=False)
     citations_json: Mapped[str] = mapped_column(Text, default="[]", nullable=False)
+    extracted_data_json: Mapped[str] = mapped_column(Text, default="{}", nullable=False)
 
     @property
     def citations(self) -> list[str]:
@@ -22,3 +23,11 @@ class ReportRecord(Base):
     @citations.setter
     def citations(self, value: list[str]) -> None:
         self.citations_json = json.dumps(value)
+
+    @property
+    def extracted_data(self) -> dict:
+        return json.loads(self.extracted_data_json)
+    
+    @extracted_data.setter
+    def extracted_data(self, value: dict) -> None:
+        self.extracted_data_json = json.dumps(value)
