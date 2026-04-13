@@ -40,13 +40,76 @@ It is designed to:
 ## Architecture
 
 ```mermaid
-flowchart LR
-    A["Upload Genetic Report"] --> B["PDF Text Extraction"]
-    B --> C["Structured JSON Extraction"]
-    C --> D["Local SQLite Storage"]
-    D --> E["Retriever"]
-    E --> F["Answer Generation"]
-    F --> G["Simple Explanation + Citations"]
+flowchart TB
+  %% =======================
+  %% Client Layer
+  %% =======================
+  U["User (Patient/Caregiver)"]
+  FE["Frontend (Vue + Electron)"]
+  U --> FE
+
+  %% =======================
+  %% API Layer
+  %% =======================
+  FE --> API["FastAPI Gateway (/api)"]
+  API --> R1["/reports/upload"]
+  API --> R2["/query"]
+
+  %% =======================
+  %% Upload + Extraction Pipeline
+  %% =======================
+  R1 --> V1["File Validation (PDF only)"]
+  V1 --> P1["PDF Loader (LangChain PyPDFLoader)"]
+  P1 --> T1["Raw Text Normalization"]
+  T1 --> E1["Genetic JSON Extractor (Ollama llama3.2:3b)"]
+  E1 --> J1["Structured JSON\n(gene, variant, zygosity, classification, disease...)"]
+
+  %% Storage for upload stage
+  T1 --> DB1["SQLite (SQLAlchemy)\nreports.raw_text"]
+  J1 --> DB2["SQLite (SQLAlchemy)\nreports.extracted_data_json"]
+
+  %% =======================
+  %% Document Building + Indexing
+  %% =======================
+  DB1 --> D1["Patient Document Builder"]
+  DB2 --> D1
+  D1 --> C1["Chunking Layer\n(section-aware chunks)"]
+  C1 --> EMB1["Embedding Model (local)"]
+  EMB1 --> VDB1["Vector DB\nPatient Index"]
+
+  %% =======================
+  %% Knowledge Base Ingestion
+  %% =======================
+  S1["Trusted Sources\nClinVar / OMIM / GeneReviews / Patient Orgs"] --> K1["KB Ingestion Pipeline"]
+  K1 --> K2["Cleaning + Metadata Enrichment\n(source,url,gene,disease,last_updated)"]
+  K2 --> K3["KB Chunking"]
+  K3 --> EMB2["Embedding Model (local)"]
+  EMB2 --> VDB2["Vector DB\nKnowledge Index"]
+  K2 --> KDB["SQLite\nKB metadata catalog"]
+
+  %% =======================
+  %% Query / RAG Pipeline
+  %% =======================
+  R2 --> Q1["Query Preprocessor\nintent + entity extraction"]
+  DB2 --> Q1
+  Q1 --> RET["Hybrid Retriever"]
+  VDB1 --> RET
+  VDB2 --> RET
+  KDB --> RET
+  RET --> RR["Reranker + Context Assembler\n(top patient chunks + top KB chunks)"]
+
+  RR --> GEN["Answer Generator LLM (local)\nGrounded prompt"]
+  GEN --> OUT["Response Formatter\nTL;DR + Simple + Detailed + Citations + Safety Note"]
+  OUT --> API
+  API --> FE
+
+  %% =======================
+  %% Observability + Safety
+  %% =======================
+  API --> LOG["Audit/Telemetry (local logs)\nrequest id, retrieval ids, errors"]
+  GEN --> SAFE["Safety Guard\ninsufficient-evidence fallback"]
+  SAFE --> OUT
+
 ```
 
 ### Backend Flow
