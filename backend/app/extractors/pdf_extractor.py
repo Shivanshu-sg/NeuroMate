@@ -18,6 +18,7 @@ class PDFExtractor:
 
         loader = PyPDFLoader(str(stored_path))
         documents = loader.load()
-        text = "\n".join(document.page_content for document in documents if document.page_content).strip()
+        short_docs = documents[:2]
+        text = "\n".join(document.page_content for document in short_docs if document.page_content).strip()
 
         return normalize_whitespace(text), stored_path

@@ -18,15 +18,15 @@ class GeneticReportExtractor:
         {text}
 
         Your task is to extract the following information:
-        1. Patient Name
-        2. Age(in years, null if not found)
-        3. Gender(Male/Female, null if not found)
-        4. Gene Name
-        5. Variant
-        6. Variant Type
-        7. Zygosity
-        8. Classification
-        9. Disease Name (if mentioned else null)
+        1. patient_name (null if not found)
+        2. age (in years, null if not found)
+        3. gender (Male/Female, null if not found)
+        4. gene_name
+        5. variant
+        6. variant_type
+        7. zygosity
+        8. classification
+        9. disease_name (if mentioned else null)
 
         The output must be in JSON format with the keys as mentioned above. If any information is not found, the value should be null.
         No extra text should be included in the output. Only the JSON object should be returned.
