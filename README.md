@@ -180,5 +180,4 @@ POST /api/kb/index
 NeuroMate is a research/development assistant and not a medical device. It does not replace advice from qualified healthcare professionals, genetic counselors, or neurologists.
 
 ## License
-
-Add your preferred license before public distribution.
+This project is licensed under the MIT Licens
