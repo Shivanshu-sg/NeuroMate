@@ -1,0 +1,57 @@
+Understanding Charcot-Marie-Tooth Disease Type 2
+Charcot-Marie-Tooth disease, or CMT, is a genetic disease of the nervous system with many different causes that are divided into different types. Despite sharing similar symptoms, distinguishing the differences between CMT subtypes is crucial for doctors and scientists to design and deliver effective therapies. Different types of CMT are grouped together based on how they are inherited and the precise piece of the nervous system that is dysfunctional. Learn about Type 1 Charcot-Marie-Tooth disease, Type 4 and Type X.
+
+CMT2 is typically inherited with an autosomal dominant pattern. This means that the disease-causing gene is not associated with gender, and one copy of the disease-altered gene is enough to cause symptoms (everyone has two copies of every gene, one from their mother and one from their father). The defect causing CMT2A is found on chromosome 1p36 at the MFN2 gene while CMT2B is characterized by severe ulceration problems and the defect is located on chromosome 3, the RAB 7 protein.
+
+Another name for CMT2 is “Axonal CMT” which alludes to the other defining characteristic of this type of CMT. CMT2 is caused by dysfunctions associated with the axon. Axons are the extensions of the electrically active cells of the nervous system (neurons) that are housed in the brain and spinal cord. These axonal extensions pass along that electrical impulse all throughout the nerves found in the rest of the body. Axons have a protective layer known as a Myelin Sheath which can be weakened (demyelinated), leaving axons vulnerable to damage. When CMT2 damages these axons, it is as if the wires extending out to move the muscles in the body begin to fray. The electrical communication those muscles rely on becomes inconsistent.
+
+
+Need an even simpler way to understand nerve cells, the peripheral nervous system and CMT? Watch this quick 5-minute video from scientific expert Dr. Grace Pavlath.
+
+Symptoms of CMT2
+When the axons connecting to and communicating with the body’s extremities begin to weaken and wither, the muscles also weaken. Muscle weakness in the feet is one of the first symptoms in CMT2. It will manifest as hammertoes and pes cavus (high arch). These two physical changes in the shape of the feet arise from the deterioration of their small muscles. Other physical characteristics include distal weakness, atrophy, sensory loss, decreased deep-tendon reflexes, and variable foot deformity.
+
+While the physical changes resulting from muscle weakness are visually apparent, there are more invisible signs of nervous system damage, including numbness or a loss of sensation in the same areas. The nerves extending to the muscles to communicate to them are also sending messages back to the brain about what the skin around those muscles is feeling. CMT2 degenerates axons communicating to muscles and conveying information about sensation.
+
+CMT2 is a slow, progressive disorder. Over time, muscle weakness and numbness will extend further up the legs and begin to affect the arms and hands. As the disease worsens, proprioception may be compromised. Proprioception is the ability to sense where your limbs are in space. This is a very important feedback sensation for balance and coordination — two skills that will deteriorate as the disease worsens.
+
+Read more about CMT signs and symptoms.
+
+Causes of CMT2
+CMT2 is linked to dysfunctional axons, but these defects in axons have been connected to many different genetic causes. For axons to accomplish their function, they must be very long and extend far from the power and control centers of their cell. This incredible length also makes them vulnerable. CMT2 has the most genetic diversity of any major form of CMT, with 31 different genetic causes identified to date. When a new genetic cause of CMT2 is identified, it is added to the name in the form of a letter on the end. Since there are only 26 letters in the alphabet and 31 CMT2-causing genes, double letters are used to increase the possible number of identifiers.
+
+ 
+
+CMT2A: Gene mutations in MFN2, chromosome 1p36
+CMT2B: Gene mutations in RAB7A, chromosome 3
+CMT2B1: Recessive mutations in LMNA
+CMT2B2: Recessive mutations in MED25 and dominant mutations in PKNP
+CMT2C: Mutations in TRPV4
+CMT2D: Mutations in GARS
+CMT2E: Mutations in NEFL
+CMT2F: Mutations in HSPB1 (also known as HSP27)
+CMT2G: Mutations in LRSAM1
+CMT2H: Mapped to chromosomal location 8113-q23 without a specific causative gene (yet)
+CMT2I: Mutations in MPZ with adult-onset of disease symptoms
+CMT2J: Mutations in MPZ with additional symptoms of pupillary alterations and deafness
+CMT2K: Mutations in GDAP1
+CMT2L: Mutations in HSPB8 (also known as HSP22)
+CMT2M: Mutations in DNM2
+CMT2N: Mutations in AARS
+CMT2O: Mutations in DYNC1H1 (also known as DHC)
+CMT2P: Mutations in LRSAM1
+CMT2Q: Mutations in DHTKD1
+CMT2R: Mutations in TRIM2
+CMT2S: Mutations in IGHMBP2
+CMT2T: Mutations in MME
+CMT2U: Mutations in MARS
+CMT2V: Mutations in NAGLU
+CMT2W: Mutations in HARS
+CMT2X: Mutations in SPG11
+CMT2Y: Mutations in VCP
+CMT2Z: Mutations in MORC2
+CMT2CC: Mutations in NEFH
+CMT2DD: Mutations in ATP1A1
+CMT2EE: Mutations in MPV17
+Treatments for CMT2
+While no treatments or cures currently exist for CMT, the science to change that does. The CMT Research Foundation is currently funding cutting-edge research solely focused on drug development, including projects to advance treatments for CMT2.

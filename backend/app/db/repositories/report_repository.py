@@ -19,4 +19,26 @@ class SQLiteReportRepository:
             session.expunge(report)
             return report
 
+    def get_latest_for_user(self, user_id: str) -> ReportRecord | None:
+        with SessionLocal() as session:
+            report = (
+                session.query(ReportRecord)
+                .filter(ReportRecord.user_id == user_id)
+                .order_by(ReportRecord.created_at.desc())
+                .first()
+            )
+            if report is None:
+                return None
+            session.expunge(report)
+            return report
+        
+    def get_report(self, report_text: str) -> ReportRecord | None:
+        with SessionLocal() as session:
+            report = session.query(ReportRecord).filter(ReportRecord.raw_text == report_text).first()
+            if report is None:
+                return None
+            session.expunge(report)
+            return report
+        
+
 report_repository = SQLiteReportRepository()
